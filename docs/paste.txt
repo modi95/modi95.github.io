@@ -1,0 +1,21 @@
+require "net/http"
+require "nokogiri"
+
+#system ("svn log --verbose --xml https://subversion.ews.illinois.edu/svn/sp15-cs242/akmodi2 > svn_log.xml")
+#system ("svn list --xml --recursive https://subversion.ews.illinois.edu/svn/sp15-cs242/akmodi2 > svn_list.xml")
+
+svn_log_f = File.open("svn_log.xml", "r")
+svn_list_f = File.open("svn_list.xml", "r")
+
+slist = Nokogiri::XML(svn_list_f)
+
+i = 0
+filenames = Array.new
+slist.xpath('//entry').each do |entry|
+	if (entry["kind"] == "dir" and slist.xpath('//name')[i].children[0].to_s.length < 14)
+		file_name = slist.xpath('//name')[i].children[0].to_s
+		filenames.push(file_name)
+	end
+	i = i+1
+end
+puts filenames
