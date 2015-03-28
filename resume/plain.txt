@@ -1,0 +1,78 @@
+resume.txt
+
+ABHISHEK K. MODI 
+www.akmodi.com  | github.com/modi95
+akmodi2@illinois.edu | + 1(217)898-5277 
+
+ 
+EDUCATION 
+University of Illinois at Urbana – Champaign
+Pursuing B.S. in Computer Science; Expected Graduation in 2017 
+CS Classes : Completed –  Data Structures, Discrete Structures, System Programming 
+In Progress – Computer Architecture, Algorithms & Models of Computation, Virtual Reality, Programming Studio 
+Awarded Engineering Deans List – Spring 2014, Fall 2013 
+Awarded Engineering James Scholar - Since start of Freshman Year 
+ 
+
+EXPERIENCE 
+  
+CS 196 Course Staff | Department of Computer Science, University of Illinois
+Member of Executive Course Staff and Head of Corporate Committee 
+This course is the Honors Section for Introduction to Computer Science and is run by Computer Science Students. 
+• Member of a team that is mentoring over 160 new Computer Science students. 
+• Mentoring freshmen on projects involving Natural Language Processing, Artificial Intelligence, and Computer Vision. 
+• Directing new members in Course Staff through their first semester of teaching. 
+• Conducting micro-lectures on Data Structures and Programming Principles. 
+• Designing and Planning course content and materials. 
+• Responsible for corporate outreach for funding this course, and creating awareness about this course. 
+ 
+Software Developer Intern | HSBC Mumbai 
+Intern with IT and Trading at HSBC Securities and Capital Markets (India) Pvt. Ltd. 
+• Redesigned the algorithm and process by which a customer’s trading request is handled. 
+• The new algorithm facilitates a 90% improvement in the response time for requests. 
+• Automated a number of daily functions that were previously performed manually. 
+• Added Futures & Options functionality to programs which previously only processed Equities. 
+ 
+Front End Web Developer | ATLAS, University of Illinois 
+ATLAS (Applied Technologies for learning in the Arts and Sciences) manages IT for the College of Liberal Arts and Sciences 
+• Assisted in designing and development of websites for new academic programs at the university. 
+• Performed maintenance on and helped update several live sites. 
+• Maintained communication with the clients of websites that were assigned to me. 
+ 
+
+ACTIVE PROJECTS 
+  
+Left 4 Virtual Reality – (MHacks V: Top 10) Immersive Virtual Reality controllers for First Person Shooter games. Largely a hardware project using a Raspberry Pi along with a number of sensors to translate physical actions into in-game actions. 
+
+World Chat – (WildHacks: IBM API Prize) Android, iOS, and Web apps (using node.js, react.js) that translate messages into a user’s native language. For example, to enable a user who only speaks language A can chat with another user that speaks only language B by translating in the background. 
+
+241Beats – Android app built using the Android NDK that synchronizes music playback across multiple connected devices.
+
+Cellular Lock – (Boilermake: Twilio API Prize) Basic Distributed system using SMS to communicate between nodes. 
+
+Last layer – An n - factor authentication scheme for RFID / proximity access locks. The program is built to run on a Raspberry Pi and is designed to fit into existing locks. 
+ 
+
+CAMPUS INVOLVEMENT 
+  
+Reflections Projections (R|P) Mechmania 
+Mechmania is a 24 hour AI coding competition hosted at R|P, an annual Computer Science Conference at UIUC 
+• Member of a team of 6 students responsible for developing and maintain the associated infrastructure. 
+• Developing of infrastructure using Python and various libraries (as yet to be decided). 
+  
+Illini Hackers 
+This is the umbrella RSO for hackathon related events. Illini Hackers stood first during the MLH Fall 2014 season. 
+• Notable personal achievements at Hackathons: 
+MHacks V (Sp15) – Top 10 Finalist    |    Boilermake (Fa14) – Twilio API Prize    |    WildHacks (Fa14) – IBM API Prize 
+ 
+  
+Association of Computing Machinery at Illinois (ACM) 
+The University of Illinois Chapter of the Association of Computing Machinery. 
+• Active member and participant in SIGART (Special Interest Group for Artificial Intelligence) 
+ 
+ 
+PROGRAMMING SKILLS 
+Comfortable with:
+C++	C	Java	Objective C	Python	Ruby	Visual Basic	JavaScript	C# 
+Familiar With:
+Android NDK	MySQL	Rails	node.js	Flask
