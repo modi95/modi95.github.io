@@ -13,7 +13,7 @@
 </head>
 
 
-<body>
+<body onload="loadSeq()">
 
 
 
@@ -24,16 +24,16 @@
     <div class="container">
       <div class="row">
         <div class="col col-lg-12 col-sm-12">
-          <p>Hi, I'm </p>
+          <p id="greeting">Hi, I'm </p>
           <h1>Abhishek Modi</h1>
           <p>Computer Science, UIUC 2017<br> &nbsp;</p>
           <p>
-            <a href="https://github.com/modi95"><img src="images/social/GitHub.png" alt="GitHub" height="36"></a> &nbsp;
-            <a href="http://www.akmodi.com/resume"><img src="images/social/Resume.png" alt="Resume" height="36"></a> &nbsp;
-            <a href="https://linkedin.com/in/akmodi2"><img src="images/social/LinkedIn.png" alt="LinkedIn" height="36"></a> &nbsp;
-            <a href="https://facebook.com/akmodi1995"><img src="images/social/Facebook.png" alt="Facebook" height="36"></a> &nbsp;
-            <a href="https://twitter.com/vious21"><img src="images/social/Twitter.png" alt="Twitter" height="36"></a> &nbsp;
-            <a href="mailto:init@akmodi.com"><img src="images/social/Email.png" alt="Email" height="36"></a>
+            <a href="https://github.com/modi95"><img src="images/social/GitHub.png" name = "social_m" alt="GitHub" height="36"></a> &nbsp;
+            <a href="http://www.akmodi.com/resume"><img src="images/social/Resume.png" name = "social_m" alt="Resume" height="36"></a> &nbsp;
+            <a href="https://linkedin.com/in/akmodi2"><img src="images/social/LinkedIn.png" name = "social_m" alt="LinkedIn" height="36"></a> &nbsp;
+            <a href="https://facebook.com/akmodi1995"><img src="images/social/Facebook.png" name = "social_m" alt="Facebook" height="36"></a> &nbsp;
+            <a href="https://twitter.com/vious21"><img src="images/social/Twitter.png" name = "social_m" alt="Twitter" height="36"></a> &nbsp;
+            <a href="mailto:init@akmodi.com"><img src="images/social/Email.png" name = "social_m" alt="Email" height="36"></a>
           </p>
         </div>
 
@@ -80,7 +80,7 @@
     <div class="row">
       <div class="col-md-4 col-centered"><div class="well">
         <img src="images/htop/DotStar.png" class="img-responsive" >
-        <h3 class ="text-center">Instructing CS 196</h3>
+        <h3 class ="text-center">Instructing CS196</h3>
         <p class="text-justify"></p>
         </div>
       </div>
@@ -149,7 +149,7 @@
         <a href="https://github.com/MAKE-UIUC/BHChi15">
         <img src="images/tree/QuickMed.png" class="img-responsive" ></a>
         <a href="https://github.com/MAKE-UIUC/BHChi15"><h3 class ="text-center">QuickMed</h3></a>
-        <p class="text-justify">Although the field of medicine has advanced tremendously over the last decade, technology has not kept pace. There is no aggregated source for medical data, and customers have no simply way to locate essential medications such as epipens. This is appaling for something this important. QuickMed aims to solve this problem. </p>
+        <p class="text-justify">Although the field of medicine has advanced tremendously over the last decade, technology has not kept pace. There is no aggregated source for medical data, and customers have no simple way to locate essential medications such as epipens. This is appaling for something this important. QuickMed aims to solve this problem. </p>
         </div>
       </div>
       <div class="col-md-3 col-centered"><div class="well">
@@ -163,7 +163,7 @@
         <a href = "https://google.com/foobar">
         <img src="images/tree/google-foobar.png" class="img-responsive" ></a>
         <a href = "https://google.com/foobar"><h3 class ="text-center">Google foo.bar</h3></a>
-        <p class="text-justify">I don't know how much to say here. Let's leave it at - these were some of the most interesting coding challenges I've attempted.</p>
+        <p class="text-justify">I don't know how much to say here. Let's leave it at - these were some of the most interesting coding challenges I've ever attempted.</p>
         </div>
       </div>
       <div class="col-md-3 col-centered"><div class="well">
@@ -180,7 +180,7 @@
     <div class="container">
       <div class="bs-docs-social">
       <hr>
-        <p class="text-center"><br>♥ ♥ ♥ You scrolled all the way to the end ♥ ♥ ♥</p>
+        <p id="scroll_end" class="text-center"><br>♥ ♥ ♥ You scrolled all the way to the end ♥ ♥ ♥</p>
         <p class="text-center">
             <a href="https://github.com/modi95"><img src="images/social/GitHub.png" alt="GitHub" height="30"></a> &nbsp;
             <a href="http://www.akmodi.com/resume"><img src="images/social/Resume.png" alt="Resume" height="30"></a> &nbsp;
@@ -195,5 +195,43 @@
     <!-- script references -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script>
+function loadSeq() {
+    var greet = document.getElementById("greeting")
+    greet.innerHTML = get_greeting()
+
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      // tasks to do if it is a Mobile Device
+      fix_mobile();
+    }
+    return
+}
+function get_greeting(){
+  var date = new Date()
+  var hour = date.getHours()
+  if (hour > 5 && hour < 11){
+    return "Good Morning, I'm"
+  }
+  if (hour > 11 && hour < 16){
+    return "Good Afternoon, I'm"
+  }
+  if (hour > 16){
+    return "Good Evening, I'm"
+  }
+  if (hour < 3){
+    return "Good Evening, I'm"
+  }
+  return "Oh dear it's late... Hi, I'm"
+}
+function fix_mobile(){
+  socs = document.getElementsByName("social_m")
+  for (var i = 0; i < socs.length; i++){
+    socs[i].height = 30
+  }
+  document.getElementById("scroll_end").innerHTML = ("<br>♥ You scrolled to the end ♥")
+
+  return
+}
+</script>
 </body>
 </html>
