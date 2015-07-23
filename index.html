@@ -26,7 +26,7 @@
         <div class="col col-lg-12 col-sm-12">
           <p id="greeting">Hi, I'm </p>
           <h1>Abhishek Modi</h1>
-          <p>Computer Science, UIUC 2017<br> &nbsp;</p>
+          <p id="cs-illinois">Computer Science, UIUC 2017<br> &nbsp;</p>
           <p>
             <a href="https://github.com/modi95"><img src="images/social/GitHub.png" name = "social_m" alt="GitHub" height="36"></a> &nbsp;
             <a href="http://www.akmodi.com/resume"><img src="images/social/Resume.png" name = "social_m" alt="Resume" height="36"></a> &nbsp;
@@ -228,7 +228,8 @@ function fix_mobile(){
   for (var i = 0; i < socs.length; i++){
     socs[i].height = 30
   }
-  document.getElementById("scroll_end").innerHTML = ("<br>♥ You scrolled to the end ♥")
+  document.getElementById("scroll_end").innerHTML = ("<br>♥ ♥ You scrolled to the end ♥ ♥")
+  document.getElementById("cs-illinois").innerHTML = ("Computer Science <br> UIUC 2017<br> &nbsp;")
 
   return
 }
