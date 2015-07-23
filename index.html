@@ -23,7 +23,7 @@
   <div class="jumbotron text-center">
     <div class="container">
       <div class="row">
-        <div class="col col-lg-12 col-sm-12">
+        <div id="card" class="col col-lg-12 col-sm-12">
           <p id="greeting">Hi, I'm </p>
           <h1>Abhishek Modi</h1>
           <p id="cs-illinois">Computer Science, UIUC 2017<br> &nbsp;</p>
@@ -63,7 +63,7 @@
       <div class="col-md-4 col-centered"><div class="well">
         <img src="images/whoami/Developer.png" class="img-responsive" alt="Developer">
         <h3 class ="text-center">Developer</h3>
-        <p class="text-justify">This is core of who I am. I couldn't come up with a blurb could really do it justice.</p>
+        <p class="text-justify">This is core of who I am. I couldn't come up with a blurb that really did it justice.</p>
         </div>
       </div>
       <div class="col-md-4 col-centered"><div class="well">
@@ -156,7 +156,7 @@
         <a href = "https://github.com/MAKE-UIUC/CrackMIT">
         <img src="images/tree/crackmit.png" class="img-responsive"></a>
         <a href = "https://github.com/MAKE-UIUC/CrackMIT"><h3 class ="text-center">CrackMIT</h3></a>
-        <p class="text-justify">Each year, HackMIT has an optional challenge for entry. The first couple of teams that solve this challenge are guaranteed entry to HackMIT. Mine was one of these of teams. Check out our git repo.</p>
+        <p class="text-justify">Each year, HackMIT has an optional challenge for entry. The first couple of teams that solve this challenge are guaranteed entry to HackMIT. Mine was one of these of teams. Check out write-up about the challenge.</p>
         </div>
       </div>
       <div class="col-md-3 col-centered"><div class="well">
@@ -209,10 +209,10 @@ function loadSeq() {
 function get_greeting(){
   var date = new Date()
   var hour = date.getHours()
-  if (hour > 5 && hour < 11){
+  if (hour > 5 && hour <= 11){
     return "Good Morning, I'm"
   }
-  if (hour > 11 && hour < 16){
+  if (hour > 11 && hour <= 16){
     return "Good Afternoon, I'm"
   }
   if (hour > 16){
@@ -221,7 +221,7 @@ function get_greeting(){
   if (hour < 3){
     return "Good Evening, I'm"
   }
-  return "Oh dear it's late... Hi, I'm"
+  return "Oh dear you're up late... Hi, I'm"
 }
 function fix_mobile(){
   socs = document.getElementsByName("social_m")
@@ -230,7 +230,7 @@ function fix_mobile(){
   }
   document.getElementById("scroll_end").innerHTML = ("<br>♥ ♥ You scrolled to the end ♥ ♥")
   document.getElementById("cs-illinois").innerHTML = ("Computer Science <br> UIUC 2017<br> &nbsp;")
-
+  document.getElementById("card").setAttribute("style","height:100vh;")
   return
 }
 </script>
