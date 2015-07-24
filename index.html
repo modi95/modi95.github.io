@@ -29,7 +29,7 @@
           <p id="cs-illinois">Computer Science, UIUC 2017<br> &nbsp;</p>
           <p>
             <a href="https://github.com/modi95"><img src="images/social/GitHub.png" name = "social_m" alt="GitHub" height="36"></a> &nbsp;
-            <a href="http://www.akmodi.com/resume"><img src="images/social/Resume.png" name = "social_m" alt="Resume" height="36"></a> &nbsp;
+            <a href="coming-soon.html"><img src="images/social/Resume.png" name = "social_m" alt="Resume" height="36"></a> &nbsp;
             <a href="https://linkedin.com/in/akmodi2"><img src="images/social/LinkedIn.png" name = "social_m" alt="LinkedIn" height="36"></a> &nbsp;
             <a href="https://facebook.com/akmodi1995"><img src="images/social/Facebook.png" name = "social_m" alt="Facebook" height="36"></a> &nbsp;
             <a href="https://twitter.com/vious21"><img src="images/social/Twitter.png" name = "social_m" alt="Twitter" height="36"></a> &nbsp;
@@ -51,7 +51,7 @@
   <div class="container">
 
   <!-- ============= ABOUT ME ======================================-->
-  <h1 class="text-center">About Me</h1>
+  <h1 name="body-header" class="text-center">About Me</h1>
 
     <div class="row">
       <div class="col-md-4 col-centered"><div class="well">
@@ -75,12 +75,13 @@
     </div>
 
   <!-- ============= What I'm Up To ======================================-->
-  <h1 class="text-center">What I've Been Up To</h1>
+  <h1 name="body-header" class="text-center">What I've Been Up To </h1>
 
     <div class="row">
       <div class="col-md-4 col-centered"><div class="well">
-        <img src="images/htop/DotStar.png" class="img-responsive" >
-        <h3 class ="text-center">Instructing CS196</h3>
+        <a href="coming-soon.html">
+        <img src="images/htop/DotStar.png" class="img-responsive" alt="1404 Siebel Center" ></a>
+        <a href="coming-soon.html"><h3 class ="text-center">Instructing CS196</h3></a>
         <p class="text-justify"></p>
         </div>
       </div>
@@ -92,21 +93,23 @@
         </div>
       </div>
       <div class="col-md-4 col-centered"><div class="well">
-        <img src="images/htop/forsyth.png" class="img-responsive" >
-        <h3 class ="text-center">Research with Prof. Forsyth</h3>
+        <a href="coming-soon.html">
+        <img src="images/htop/forsyth.png" class="img-responsive" ></a>
+        <a href="coming-soon.html"><h3 class ="text-center">Research with Prof. Forsyth</h3></a>
         <p class="text-justify"></p>
         </div>
       </div>
       <div class="col-md-4 col-centered"><div class="well">
         <a href="https://courses.engr.illinois.edu/cs498sl/">
-        <img src="images/htop/cs498vr.png" class="img-responsive" ></a>
+        <img src="images/htop/cs498vr.png" class="img-responsive" alt ="Sujay Khandekar, Harshit Agarwal, Abhishek Modi, Aravind Sundaresan, Andrew Kuznetsov, Aayush Sharma, Connie Fan"></a>
         <a href="https://courses.engr.illinois.edu/cs498sl/"><h3 class ="text-center">TA for CS498 VR</h3></a>
         <p class="text-justify"></p>
         </div>
       </div>
       <div class="col-md-4 col-centered"><div class="well">
-        <img src="images/htop/lavalle.png" class="img-responsive" >
-        <h3 class ="text-center">Research with Prof. LaValle</h3>
+        <a href="coming-soon.html">
+        <img src="images/htop/lavalle.png" class="img-responsive" ></a>
+        <a href="coming-soon.html"><h3 class ="text-center">Research with Prof. LaValle</h3></a>
         <p class="text-justify"></p>
         </div>
       </div>
@@ -121,7 +124,7 @@
     </div>
 
   <!-- ============= Projects ======================================-->
-  <h1 class="text-center"> Projects / Stuff</h1>
+  <h1 name="body-header" class="text-center">Projects / Stuff</h1>
 
     <div class="row">
       <div class="col-md-3 col-centered"><div class="well">
@@ -198,6 +201,7 @@
   <script>
 function loadSeq() {
     var greet = document.getElementById("greeting")
+    console.log("O hai der \n Thanks so much for taking this much interest in my site\n\nI couldn't think of very many easter eggs, so here's picture of Aayush and Thomas filling easter eggs: \nwww.akmodi.com/images/eastereggs.jpg")
     greet.innerHTML = get_greeting()
 
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -210,17 +214,19 @@ function get_greeting(){
   var date = new Date()
   var hour = date.getHours()
   if (hour > 5 && hour <= 11){
-    return "Good Morning, I'm"
+    messages = ["Good Morning, I'm", "Guten Morgen, I'm", "Bonjour, je suis"]
+    return messages[Math.floor(Math.random() * messages.length)];
   }
   if (hour > 11 && hour <= 16){
-    return "Good Afternoon, I'm"
+    messages = ["Good Afternoon, I'm", "Guten Tag, I'm", "Bon Après-Midi, je suis"]
+    return messages[Math.floor(Math.random() * messages.length)];
   }
-  if (hour > 16){
+  if (hour > 16 || hour < 3){
+    messages = ["Good Evening, I'm", "Guten Abend, I'm", "Bonsoir! je suis"]
+    return messages[Math.floor(Math.random() * messages.length)];
     return "Good Evening, I'm"
   }
-  if (hour < 3){
-    return "Good Evening, I'm"
-  }
+
   return "Oh dear you're up late... Hi, I'm"
 }
 function fix_mobile(){
@@ -231,6 +237,18 @@ function fix_mobile(){
   document.getElementById("scroll_end").innerHTML = ("<br>♥ ♥ You scrolled to the end ♥ ♥")
   document.getElementById("cs-illinois").innerHTML = ("Computer Science <br> UIUC 2017<br> &nbsp;")
   //document.getElementById("card").setAttribute("style","height:100vh;")
+  //  for (a=0; a<5; a++){
+  //    x = document.getElementsByClassName("well")
+  //    for (i=0; i<x.length; i++){
+  //      x[i].innerHTML = x[i].innerHTML + "<br> &nbsp; <br> <hr>"
+  //      x[i].setAttribute("class","")
+  //    }
+  //  }
+  //  heads = document.getElementsByName("body-header")
+  //  for(a=0; a<heads.length; a++)
+  //  {
+  //    heads[a].innerHTML = heads[a].innerHTML + "<br> &nbsp;"
+  //  }
   return
 }
 </script>

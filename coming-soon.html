@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Abhishek Modi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+</head>
+
+
+<body onload="loadSeq()">
+
+
+
+<!-- HEADER 
+  =================================-->
+
+  <div class="jumbotron text-center">
+    <div class="container">
+      <div class="row">
+        <div id="card" class="col col-lg-12 col-sm-12">
+          <h1 id="greeting">Hi,  </h1>
+          <h2>&nbsp;<br>This page doesn't exist as yet<br>&nbsp;</h2>
+          <p>
+            <a href="https://github.com/modi95"><img src="images/social/GitHub.png" name = "social_m" alt="GitHub" height="36"></a> &nbsp;
+            <a href="coming-soon.html"><img src="images/social/Resume.png" name = "social_m" alt="Resume" height="36"></a> &nbsp;
+            <a href="https://linkedin.com/in/akmodi2"><img src="images/social/LinkedIn.png" name = "social_m" alt="LinkedIn" height="36"></a> &nbsp;
+            <a href="https://facebook.com/akmodi1995"><img src="images/social/Facebook.png" name = "social_m" alt="Facebook" height="36"></a> &nbsp;
+            <a href="https://twitter.com/vious21"><img src="images/social/Twitter.png" name = "social_m" alt="Twitter" height="36"></a> &nbsp;
+            <a href="mailto:init@akmodi.com"><img src="images/social/Email.png" name = "social_m" alt="Email" height="36"></a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div> 
+</div>
+<!-- /header container-->
+
+<!-- CONTENT
+  =================================-->
+
+
+  <div class="container">
+
+  <!-- ============= ABOUT ME ======================================-->
+
+    <div class="row">
+    <div class="col-md-3 col-centered"></div>
+    <div class="col-md-6 col-centered">
+    <p class="text-center">I recently started redesigning my site to look like this and I'm still working on getting this page up. Check back soon please. In the mean time, please feel free to email me about information you need :).<br>&nbsp;</p>
+    <p class="text-center">- Abhishek Modi <br><a href="mailto:init@akmodi.com">init@akmodi.com</a></p>
+    </div>
+
+    <!-- script references -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+function loadSeq() {
+    var greet = document.getElementById("greeting")
+    console.log("There really isn't much over here. You can stop looking around now :)")
+    greet.innerHTML = get_greeting()
+
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      // tasks to do if it is a Mobile Device
+      fix_mobile();
+    }
+    return
+}
+function get_greeting(){
+  messages = ["I'm sorry ", "Es tut mir leid", "Je suis désolé "]
+  return messages[Math.floor(Math.random() * messages.length)];
+}
+function fix_mobile(){
+  socs = document.getElementsByName("social_m")
+  for (var i = 0; i < socs.length; i++){
+    socs[i].height = 30
+  }
+  return
+}
+</script>
+</body>
+</html>
